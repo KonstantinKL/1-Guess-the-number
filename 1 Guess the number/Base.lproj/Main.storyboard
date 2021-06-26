@@ -62,7 +62,10 @@
                                                         </constraints>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="42"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="numberArea:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Mwc-e4-jwQ"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Много" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc0-Js-wR3">
                                                         <rect key="frame" x="5.6666666666666572" y="94.666666666666629" width="89" height="36"/>
@@ -92,9 +95,30 @@
                                                 <state key="normal" title="Попытка">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3L-UW-1Ij"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-0g-TBg">
+                                                <rect key="frame" x="345" y="237" width="61" height="35"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="8zj-TA-FNE"/>
+                                                    <constraint firstAttribute="height" constant="35" id="DAC-nv-3YN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                                <state key="normal" title="Сброс">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Sa-ac-HlW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="1vW-0g-TBg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SS3-sh-4YK" secondAttribute="leading" constant="345" id="1Yc-4Y-qbF"/>
+                                            <constraint firstAttribute="bottom" secondItem="1vW-0g-TBg" secondAttribute="bottom" id="9es-a9-p3D"/>
+                                            <constraint firstAttribute="trailing" secondItem="1vW-0g-TBg" secondAttribute="trailing" constant="8" id="EN1-CD-KLk"/>
                                             <constraint firstItem="jpQ-gc-0Ra" firstAttribute="centerY" secondItem="SS3-sh-4YK" secondAttribute="centerY" id="UMp-WO-jvL"/>
                                             <constraint firstItem="jpQ-gc-0Ra" firstAttribute="centerX" secondItem="SS3-sh-4YK" secondAttribute="centerX" id="mhz-aj-h4Z"/>
                                         </constraints>
@@ -120,6 +144,10 @@
                             <constraint firstItem="Xrq-3A-drc" firstAttribute="bottom" secondItem="fat-nc-Y6k" secondAttribute="bottom" id="pFV-E1-SOj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberByUser" destination="raa-uF-qda" id="QzJ-v8-UQK"/>
+                        <outlet property="result" destination="fc0-Js-wR3" id="Kwu-FR-8fo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
