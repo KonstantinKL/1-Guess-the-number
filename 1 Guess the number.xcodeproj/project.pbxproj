@@ -39,27 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		385A755B2687827B003E0530 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		385A755C26878297003E0530 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		385A755D2687850F003E0530 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3892EDEE2684934000CDD842 = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +63,6 @@
 				385A755E26878599003E0530 /* CheckData.swift */,
 				3892EDFE2684934000CDD842 /* ViewController.swift */,
 				3892EE002684934000CDD842 /* Main.storyboard */,
-				385A755D2687850F003E0530 /* Model */,
-				385A755C26878297003E0530 /* Controller */,
-				385A755B2687827B003E0530 /* View */,
 				3892EE032684934100CDD842 /* Assets.xcassets */,
 				3892EE052684934100CDD842 /* LaunchScreen.storyboard */,
 				3892EE082684934100CDD842 /* Info.plist */,
