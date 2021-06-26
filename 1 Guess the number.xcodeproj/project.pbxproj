@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385A755F26878599003E0530 /* CheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A755E26878599003E0530 /* CheckData.swift */; };
 		3892EDFB2684934000CDD842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3892EDFA2684934000CDD842 /* AppDelegate.swift */; };
 		3892EDFD2684934000CDD842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3892EDFC2684934000CDD842 /* SceneDelegate.swift */; };
 		3892EDFF2684934000CDD842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3892EDFE2684934000CDD842 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		385A755E26878599003E0530 /* CheckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckData.swift; sourceTree = "<group>"; };
 		3892EDF72684934000CDD842 /* 1 Guess the number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1 Guess the number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3892EDFA2684934000CDD842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3892EDFC2684934000CDD842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				3892EDFA2684934000CDD842 /* AppDelegate.swift */,
 				3892EDFC2684934000CDD842 /* SceneDelegate.swift */,
+				385A755E26878599003E0530 /* CheckData.swift */,
 				3892EDFE2684934000CDD842 /* ViewController.swift */,
 				3892EE002684934000CDD842 /* Main.storyboard */,
 				3892EE032684934100CDD842 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				3892EDFF2684934000CDD842 /* ViewController.swift in Sources */,
 				3892EDFB2684934000CDD842 /* AppDelegate.swift in Sources */,
+				385A755F26878599003E0530 /* CheckData.swift in Sources */,
 				3892EDFD2684934000CDD842 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

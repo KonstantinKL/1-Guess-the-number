@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__Guess_the_number" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fat-nc-Y6k">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5S1-2C-Vs4" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1E-d6-1Zc">
+                                                <rect key="frame" x="99" y="10" width="216" height="32.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32.670000000000002" id="DKV-Lh-x5G"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="215.66999999999999" id="Iwg-ZX-1gK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <color key="highlightedColor" systemColor="systemGray6Color"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите число от 0 до 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNf-Gx-XfB">
+                                                <rect key="frame" x="101.66666666666669" y="221.66666666666669" width="211" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstItem="g1E-d6-1Zc" firstAttribute="top" secondItem="5S1-2C-Vs4" secondAttribute="top" constant="10" id="HN4-X8-2kz"/>
+                                            <constraint firstAttribute="bottom" secondItem="UNf-Gx-XfB" secondAttribute="bottom" constant="30" id="XjO-tt-3UL"/>
+                                            <constraint firstItem="UNf-Gx-XfB" firstAttribute="centerX" secondItem="5S1-2C-Vs4" secondAttribute="centerX" id="hKf-bN-s3X"/>
+                                            <constraint firstItem="g1E-d6-1Zc" firstAttribute="centerX" secondItem="5S1-2C-Vs4" secondAttribute="centerX" id="ju8-e2-xUC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-LX-azf" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="273" width="414" height="272"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="JfB-xV-lOD">
+                                                <rect key="frame" x="157" y="70.666666666666671" width="100" height="130.66666666666663"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raa-uF-qda">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="55.666666666666664"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="KpL-AT-PgS"/>
+                                                            <constraint firstAttribute="height" constant="55.5" id="jRE-aa-HnL"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="42"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="numberArea:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Mwc-e4-jwQ"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Много" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc0-Js-wR3">
+                                                        <rect key="frame" x="5.6666666666666572" y="94.666666666666629" width="89" height="36"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="33"/>
+                                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JfB-xV-lOD" firstAttribute="centerY" secondItem="cMi-LX-azf" secondAttribute="centerY" id="1BQ-aK-12h"/>
+                                            <constraint firstItem="JfB-xV-lOD" firstAttribute="centerX" secondItem="cMi-LX-azf" secondAttribute="centerX" id="Pca-Mm-vqE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SS3-sh-4YK" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="546" width="414" height="272"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpQ-gc-0Ra">
+                                                <rect key="frame" x="142" y="106" width="130" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="AwF-Sw-Ke2"/>
+                                                    <constraint firstAttribute="height" constant="60" id="qVC-pp-szM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <state key="normal" title="Попытка">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3L-UW-1Ij"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-0g-TBg">
+                                                <rect key="frame" x="345" y="237" width="61" height="35"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="8zj-TA-FNE"/>
+                                                    <constraint firstAttribute="height" constant="35" id="DAC-nv-3YN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                                <state key="normal" title="Сброс">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Sa-ac-HlW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1vW-0g-TBg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SS3-sh-4YK" secondAttribute="leading" constant="345" id="1Yc-4Y-qbF"/>
+                                            <constraint firstAttribute="bottom" secondItem="1vW-0g-TBg" secondAttribute="bottom" id="9es-a9-p3D"/>
+                                            <constraint firstAttribute="trailing" secondItem="1vW-0g-TBg" secondAttribute="trailing" constant="8" id="EN1-CD-KLk"/>
+                                            <constraint firstItem="jpQ-gc-0Ra" firstAttribute="centerY" secondItem="SS3-sh-4YK" secondAttribute="centerY" id="UMp-WO-jvL"/>
+                                            <constraint firstItem="jpQ-gc-0Ra" firstAttribute="centerX" secondItem="SS3-sh-4YK" secondAttribute="centerX" id="mhz-aj-h4Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SS3-sh-4YK" firstAttribute="leading" secondItem="fat-nc-Y6k" secondAttribute="leading" id="0G6-hi-Cyd"/>
+                                    <constraint firstAttribute="trailing" secondItem="cMi-LX-azf" secondAttribute="trailing" id="1Fg-vv-S2g"/>
+                                    <constraint firstAttribute="trailing" secondItem="SS3-sh-4YK" secondAttribute="trailing" id="6vk-Qq-rzn"/>
+                                    <constraint firstAttribute="trailing" secondItem="5S1-2C-Vs4" secondAttribute="trailing" id="K5F-ut-3Wu"/>
+                                    <constraint firstItem="5S1-2C-Vs4" firstAttribute="leading" secondItem="fat-nc-Y6k" secondAttribute="leading" id="mwK-j7-qtO"/>
+                                    <constraint firstItem="cMi-LX-azf" firstAttribute="leading" secondItem="fat-nc-Y6k" secondAttribute="leading" id="pv8-VC-wWe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xrq-3A-drc"/>
+                        <color key="backgroundColor" red="0.092261709270000006" green="0.2405486107" blue="0.26159757379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.092261709270000006" green="0.2405486107" blue="0.26159757379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fat-nc-Y6k" firstAttribute="top" secondItem="Xrq-3A-drc" secondAttribute="top" id="Q4G-CU-Yge"/>
+                            <constraint firstItem="fat-nc-Y6k" firstAttribute="leading" secondItem="Xrq-3A-drc" secondAttribute="leading" id="e60-lS-oGs"/>
+                            <constraint firstItem="fat-nc-Y6k" firstAttribute="trailing" secondItem="Xrq-3A-drc" secondAttribute="trailing" id="igf-2t-LDK"/>
+                            <constraint firstItem="Xrq-3A-drc" firstAttribute="bottom" secondItem="fat-nc-Y6k" secondAttribute="bottom" id="pFV-E1-SOj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberByUser" destination="raa-uF-qda" id="QzJ-v8-UQK"/>
+                        <outlet property="result" destination="fc0-Js-wR3" id="Kwu-FR-8fo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.08695652173914"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
