@@ -9,27 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var checkData = CheckData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    var a = Int.random(in: 0...100)
     @IBOutlet weak var numberByUser: UITextField!
     @IBOutlet weak var result: UILabel!
     @IBAction func tryButton(_ sender: UIButton) {
         let b = Int(numberByUser.text!) ?? 0
-        if a == b {
-            print("ugadal")
-            result.text = "Угадал!"
-        } else if a < b {
-            result.text = "Много!"
-        } else if a >  b {
-            result.text = "Мало!"
-        }
+        result.text = checkData.checkAnswer(numberByUser: b)
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
-        a = Int.random(in: 0...100)
+        checkData.a = Int.random(in: 0...100)
     }
 }
-
